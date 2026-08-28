@@ -35,7 +35,7 @@ Do **not** choose the virtual device named `debounced virtual mouse`.
 ## Run
 
 ```bash
-sudo ./target/release/faulty-mouse-debounce /dev/input/by-id/YOUR_MOUSE-event-mouse 80
+sudo ./target/release/mousedb /dev/input/by-id/YOUR_MOUSE-event-mouse 80
 ```
 
 `80` is the debounce threshold in milliseconds. Good values are usually `50` to `120`.
