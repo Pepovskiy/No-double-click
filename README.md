@@ -13,7 +13,7 @@ cargo build --release
 The binary will be at:
 
 ```bash
-target/release/faulty-mouse-debounce
+target/release/mousedb
 ```
 
 ## Find your mouse event node
@@ -45,7 +45,7 @@ sudo ./target/release/faulty-mouse-debounce /dev/input/by-id/YOUR_MOUSE-event-mo
 Copy the binary somewhere stable, for example:
 
 ```bash
-sudo install -m755 target/release/faulty-mouse-debounce /usr/local/bin/faulty-mouse-debounce
+sudo install -m755 target/release/mousedb /usr/local/bin/mousedb
 ```
 
 Create `/etc/systemd/system/faulty-mouse-debounce.service`:
@@ -57,7 +57,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/faulty-mouse-debounce /dev/input/by-id/YOUR_MOUSE-event-mouse 80
+ExecStart=/usr/local/bin/mousedb /dev/input/by-id/YOUR_MOUSE-event-mouse 80
 Restart=on-failure
 
 [Install]
