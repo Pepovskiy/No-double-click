@@ -1,4 +1,4 @@
-# faulty-mouse-debounce
+# Mouse Debouce
 
 A small Rust/Linux helper for Wayland systems such as Bazzite. It grabs a faulty physical mouse with `EVIOCGRAB`, filters accidental second left-clicks, and re-emits the cleaned mouse events through `/dev/uinput` as a virtual mouse.
 
